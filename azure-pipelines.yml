@@ -1,3 +1,4 @@
-- task: DotNetCoreCLI@2
+- task: Docker@2
   inputs:
-    command: 'build'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
