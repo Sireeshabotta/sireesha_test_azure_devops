@@ -1,12 +1,7 @@
-name : Docker-CI
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
 - task: Docker@2
   inputs:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-trigger:
-  branches:
-    include:
-      - master
- 
-pool:
-  vmImage: 'ubuntu-latest'
